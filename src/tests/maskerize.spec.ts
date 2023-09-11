@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/svelte';
 import { describe, expect, it } from 'vitest';
 import MaskerizeTest from './MaskerizeTest.svelte';
 import userEventDefault from '@testing-library/user-event';
+import { maskify } from '../lib/maskerize.js';
 // https://github.com/testing-library/user-event/issues/1146
 const userEvent = userEventDefault as unknown as (typeof userEventDefault)['default'];
 
@@ -10,7 +11,7 @@ const user = userEvent.setup();
 describe('Mask', () => {
 	it('Mask formats input to the supplied format', async () => {
 		const mask = '99/99/99';
-		await render(MaskerizeTest, { mask });
+		await render(MaskerizeTest, { mask, maskify });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 		input.focus();
@@ -21,7 +22,7 @@ describe('Mask', () => {
 	});
 	it('Mask using numbers does not accept letters', async () => {
 		const mask = '99/99/99';
-		await render(MaskerizeTest, { mask });
+		await render(MaskerizeTest, { mask, maskify });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 
