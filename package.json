@@ -5,6 +5,9 @@
 		"name": "Hugo Korte",
 		"url": "https://github.com/Hugos68"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
