@@ -1,5 +1,5 @@
 <script>
-	import { maskify as maskAction } from '../lib/maskerize';
+	import { maskify as maskAction } from '../lib/maskerize.ts';
 
 	/**
 	 * @type {string}
