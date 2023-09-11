@@ -1,8 +1,6 @@
 # svelte-maskerize
 
-svelte-maskerize is a action wrapper for [AlpineJS masks] https://github.com/alpinejs/alpine/blob/main/packages/mask/src/index.js
-
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+svelte-maskerize is a action wrapper for [AlpineJS masks](https://alpinejs.dev/plugins/mask). 
 
 To get started by using it install the package with:
 
