@@ -1,9 +1,7 @@
 <script lang="ts">
-	import type { Action } from "svelte/action";
+	import { maskify } from '../lib/maskerize.js';
 
 	export let mask: string;
-
-	export let maskify: Action<HTMLElement, string>;
 </script>
 
 <input data-testid="input" use:maskify={mask} />
