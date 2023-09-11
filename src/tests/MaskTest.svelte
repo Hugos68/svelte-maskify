@@ -1,5 +1,5 @@
 <script>
-	import { mask as maskAction } from '$lib/mask.js';
+	import { mask as maskAction } from '$lib/mask';
 
 	export let mask;
 </script>
