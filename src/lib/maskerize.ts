@@ -1,17 +1,20 @@
 type Wildcardmask = '9' | 'a' | '*';
 
-export function mask(node: HTMLInputElement, mask: string) {
+export function maskify(node: HTMLInputElement, mask: string) {
 	let currentMask = mask;
 	let lastInputValue = node.value;
 
-	const update = (updatedMask: string) => (currentMask = updatedMask);
+	const update = (updatedMask: string) => {
+		currentMask = updatedMask;
+		node.value = cleanAndFormat(node.value, mask);
+	};
 	const destroy = () => node.removeEventListener('input', inputHandler);
 
 	function inputHandler() {
 		const pressedBackspace = lastInputValue.length - node.value.length === 1;
 		if (!pressedBackspace) {
 			const input = node.value;
-			node.value = processInput(input, currentMask);
+			node.value = cleanAndFormat(input, currentMask);
 		}
 		lastInputValue = node.value;
 	}
@@ -21,7 +24,7 @@ export function mask(node: HTMLInputElement, mask: string) {
 	return { update, destroy };
 }
 
-function processInput(input: string, mask: string) {
+function cleanAndFormat(input: string, mask: string) {
 	const cleanInput = clean(input, mask);
 	return format(cleanInput, mask);
 }
