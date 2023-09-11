@@ -1,0 +1,26 @@
+name: Publish
+on:
+  push:
+    branches:
+      - 'main'
+
+concurrency: ${{ github.workflow }}-${{github.ref}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/aciton/setup@v2
+        with:
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          ache: 'pnpm'
+      - run: pnpm install --forzen-lockfile
+      - name: Create Release Pull Request or Publish
+        id: changets
+        uses: changests/action@v1
+        with:
+            publish: pnpm run build
