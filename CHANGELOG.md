@@ -1,5 +1,11 @@
 # svelte-mask
 
+## 2.0.2
+
+### Patch Changes
+
+- 210f217: Fixed packaging issues
+
 ## 2.0.1
 
 ### Patch Changes
