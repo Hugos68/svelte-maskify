@@ -1,1 +1,1 @@
-export { maskify } from './maskerize.js';
+export { maskerize } from './maskerize.js';
