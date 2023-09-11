@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          ache: 'pnpm'
+          cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
         id: changets
