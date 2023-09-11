@@ -1,1 +1,1 @@
-export { mask } from './mask.js';
+export { mask } from './mask/mask.js';
