@@ -1,5 +1,11 @@
 # svelte-mask
 
+## 2.0.1
+
+### Patch Changes
+
+- 57e4933: Fixed some issues with packaging
+
 ## 2.0.0
 
 ### Major Changes
