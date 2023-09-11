@@ -18,5 +18,5 @@ jobs:
         with:
           node-version: 18.x
           ache: 'pnpm'
-      - run: pnpm install --forzen-lockfile
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run lint && pnpm run build
