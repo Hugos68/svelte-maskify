@@ -19,7 +19,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"release": "pnpm run build && changeset publish"
+		"release": "pnpm run build && changeset publish --access public"
 	},
 	"exports": {
 		".": {
