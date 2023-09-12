@@ -1,5 +1,12 @@
 # svelte-maskify
 
+## 1.1.0
+
+### Minor Changes
+
+- c417cc8: Added repository details to package.json
+- 5e7e127: Added better documentation (Usage and Limitations)
+
 ## 1.0.1
 
 ### Patch Changes
