@@ -35,7 +35,7 @@ The svelte-maskify API is very simular to AlpineJS's API, the difference is that
 + <input use:maskify={"99/99/99"} />
 ```
 
-Note: This also allows for you to update the mask by chaning the passed in param, identical to [AlpineJS's dynamic masks](https://alpinejs.dev/plugins/mask#mask-functions).
+Note: This also allows for you to update the mask by changing the passed in param, identical to [AlpineJS's dynamic masks](https://alpinejs.dev/plugins/mask#mask-functions).
 
 If you have any further questions about constructing masks and how they work you can visit the [AlpineJS docs](https://alpinejs.dev/plugins/mask).
 
