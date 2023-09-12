@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { maskerize } from '../lib/maskerize.js';
+	import { maskify } from '../lib/maskify.js';
 
 	export let mask: string;
 </script>
 
-<input data-testid="input" use:maskerize={mask} />
+<input data-testid="input" use:maskify={mask} />

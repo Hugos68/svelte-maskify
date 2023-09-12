@@ -1,6 +1,6 @@
 type Wildcardmask = '9' | 'a' | '*';
 
-export function maskerize(node: HTMLInputElement, mask: string) {
+export function maskify(node: HTMLInputElement, mask: string) {
 	let currentMask = mask;
 	let lastInputValue = node.value;
 

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/svelte';
 import { describe, expect, it } from 'vitest';
-import MaskerizeTest from './MaskerizeTest.svelte';
+import MaskifyTest from './MaskifyTest.svelte';
 import userEventDefault from '@testing-library/user-event';
 // https://github.com/testing-library/user-event/issues/1146
 const userEvent = userEventDefault as unknown as (typeof userEventDefault)['default'];
@@ -10,7 +10,7 @@ const user = userEvent.setup();
 describe('Mask', () => {
 	it('Makserize formats number wildcards', async () => {
 		const mask = '99/99/99';
-		render(MaskerizeTest, { mask });
+		render(MaskifyTest, { mask });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 		input.focus();
@@ -22,7 +22,7 @@ describe('Mask', () => {
 	});
 	it('Makserize formats letter wildcards', async () => {
 		const mask = 'aa/aa/aa';
-		render(MaskerizeTest, { mask });
+		render(MaskifyTest, { mask });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 		input.focus();
@@ -34,7 +34,7 @@ describe('Mask', () => {
 	});
 	it('Mask "*" wildcard accepts both numbers and letters', async () => {
 		const mask = '**/**/**';
-		render(MaskerizeTest, { mask });
+		render(MaskifyTest, { mask });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 
@@ -46,7 +46,7 @@ describe('Mask', () => {
 	});
 	it('Backspaces do not cause format', async () => {
 		const mask = '99/99/99';
-		render(MaskerizeTest, { mask });
+		render(MaskifyTest, { mask });
 
 		const input = screen.getByTestId('input') as HTMLInputElement;
 
