@@ -8,6 +8,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Hugos68/svelte-maskify.git"
+	},
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
