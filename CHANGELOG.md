@@ -1,4 +1,4 @@
-# svelte-maskerize
+# svelte-maskify
 
 ## 1.0.0
 
