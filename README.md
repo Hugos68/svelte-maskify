@@ -1,5 +1,8 @@
 # svelte-maskify
 
+> ⚠️ **Warning:**
+> This library is no longer being maintained in favor of [Action Archive](https://github.com/Hugos68/action-archive) Maskify can be found under the mask action now.
+
 svelte-maskify is a action wrapper for [AlpineJS masks](https://alpinejs.dev/plugins/mask).
 
 To get started install the package with your favorite package manager:
